@@ -13,26 +13,23 @@ module Api
       end
     end
 
-
     def analytics
       user_ip = request.remote_ip
       user_search_hash = SearchQuery.where(user_ip: user_ip).group(:query).count
 
       if user_search_hash.present?
-        if params[:query].present?
-          # Filtering suggestions based on user input
-          queries = user_search_hash.select { |query, count| query.downcase.include?(params[:query].downcase) }
-        else
-          # Fetching mostly used queries as suggestions on page load
-          queries = user_search_hash.sort_by { |_, count| -count }
-        end
+        queries = if params[:query].present?
+                    # Filtering suggestions based on user input
+                    user_search_hash.select { |query, _count| query.downcase.include?(params[:query].downcase) }
+                  else
+                    # Fetching mostly used queries as suggestions on page load
+                    user_search_hash.sort_by { |_, count| -count }
+                  end
         top_queries = queries.first(10).map { |query, count| { query: query, count: count } }
         render json: { top_queries: top_queries }
       else
         render json: { message: 'No query history available for this user.' }, status: :not_found
       end
     end
-
-
   end
 end

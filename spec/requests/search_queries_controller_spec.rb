@@ -4,7 +4,7 @@ require 'rails_helper'
 RSpec.describe Api::SearchQueriesController, type: :request do
   describe 'POST #search' do
     it 'creates a new search query' do
-      post '/api/search', params: { query: 'sample query'}
+      post '/api/search', params: { query: 'sample query' }
 
       expect(response).to have_http_status(:success)
       expect(SearchQuery.count).to eq(1)
@@ -53,7 +53,6 @@ RSpec.describe Api::SearchQueriesController, type: :request do
         SearchQuery.create(query: 'Another query', user_ip: '127.0.0.1')
 
         get '/api/search_queries/analytics', params: { query: 'test' }
-
 
         parsed_response = JSON.parse(response.body)
         expect(parsed_response['top_queries']).to include(a_hash_including('query' => 'Test query'))
