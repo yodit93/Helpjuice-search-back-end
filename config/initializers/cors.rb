@@ -9,9 +9,10 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins "https://yodit93.github.io/Helpjuice-search-front-end/"
 
-    resource "*",
+    resource "api/*",
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
   end
 
 end
