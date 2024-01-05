@@ -28,7 +28,7 @@ module Api
         top_queries = queries.first(10).map { |query, count| { query: query, count: count } }
         render json: { top_queries: top_queries }
       else
-        render json: { message: 'No query history available for this user.' }, status: :not_found
+        render json: { message: 'No query history available for this user.' }
       end
     end
   end

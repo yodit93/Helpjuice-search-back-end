@@ -4,6 +4,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+- [🚀 Live Demo](#live-demo)
+- [ JavaScript Frontend ](#-js-frontend-)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -20,7 +22,7 @@
 
 ## 📖 Hotjuice search <a name="about-project"></a>
 
-The Helpjuice Search Backend is a RESTful API built using Ruby on Rails. It provides endpoints to handle search queries, save search history, and generate analytics on user search behavior. The project focuses on capturing search queries made by users and analyzing the most frequently searched terms.
+The Helpjuice Search Backend is a RESTful API built using Ruby on Rails. It provides endpoints to handle search queries, save search history, and generate analytics on user search behavior. The project focuses on capturing search queries made by users and analyzing the most frequently searched terms. It is part of the Helpjuice full stack project.
 
 
 ## Built With <a name="built-with"></a>
@@ -41,6 +43,7 @@ The Helpjuice Search Backend is a RESTful API built using Ruby on Rails. It prov
   </ul>
 </details>
 
+
 ### Key Features <a name="key-features"></a>
 
 Api end points for:
@@ -49,6 +52,24 @@ Api end points for:
 
 
 <p align="right">(<a href="#table-of-contents">back to top</a>)</p>
+
+
+<!-- LIVE DEMO -->
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Link to deployed project.
+
+- [Live Demo Link](https://helpjuice-search-backend.onrender.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- VANILLA JAVASCRIPT FRONTEND -->
+
+- Helpjuice-search-frontend [Helpjuice-search-frontend](https://github.com/yodit93/Helpjuice-search-front-end)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## Getting Started <a name="getting-started"></a>
