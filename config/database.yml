@@ -16,6 +16,4 @@ test:
 
 production:
   <<: *default
-  database: helpjuice_search_back_end_production
-  username: helpjuice_search_back_end
-  password: <%= ENV["HELPJUICE_SEARCH_BACK_END_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
