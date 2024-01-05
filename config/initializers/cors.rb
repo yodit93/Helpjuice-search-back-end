@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins "https://yodit93.github.io/Helpjuice-search-front-end/"
+    origins "*"
 
     resource "api/*",
       headers: :any,
