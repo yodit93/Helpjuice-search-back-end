@@ -20,7 +20,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-## 📖 Hotjuice search <a name="about-project"></a>
+## 📖 Holpjuice search <a name="about-project"></a>
 
 The Helpjuice Search Backend is a RESTful API built using Ruby on Rails. It provides endpoints to handle search queries, save search history, and generate analytics on user search behavior. The project focuses on capturing search queries made by users and analyzing the most frequently searched terms. It is part of the Helpjuice full stack project.
 
